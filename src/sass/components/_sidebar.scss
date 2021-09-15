@@ -1,0 +1,50 @@
+.sidebar {
+    @include flex(center, space-between);
+    flex-direction: column;
+    padding: 10px 10px;
+    height: 97vh;
+
+    &__logo {
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+    }
+
+    &__nav {
+        padding: 5px;
+        
+        i {
+            font-size: 26px;
+            color: $txt-color;
+            cursor: pointer;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background: transparent;
+
+            &:hover {
+                color: $second-color;
+                background-color: $bg-chat;
+            }
+
+            &:nth-child(4) {
+                // border-right: 1px solid $second-color;
+                color: $second-color;
+                background-color: $bg-chat;
+            }
+
+        }
+    }
+
+    &__user {
+        
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+        }
+    }   
+}

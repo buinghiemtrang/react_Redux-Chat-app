@@ -1,0 +1,17 @@
+.layouts {
+    display: grid;
+    grid-template-columns: 5% 23% 50% 22%;
+    background-color: $main-bg-app;
+    height: 97vh;
+
+    .section__contact {
+        border-left: 1px solid $bg-input;
+    }
+
+    .section__boxchat {
+        background: $bg-chat;
+        border-radius: 10px;
+    }
+
+
+}

@@ -1,0 +1,217 @@
+.info {
+    padding: 10px 10px;
+    
+    &__header {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $bg-input;
+
+        &__icon {
+            font-size: 20px;
+            color: $txt-color;
+            cursor: pointer;
+
+            i {
+                padding: 10px;
+                background: $bg-chat;
+                border-radius: 8px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &__title {
+            margin-left: 10px;
+
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__user {
+
+        &__avt {
+            @include flex(center, center);
+
+            img {
+                margin-top: 20px;
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
+                clip-path: circle(50% at 50% 50%);
+            }
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500
+        }
+        p {
+            text-align: center;
+            color: $txt-color;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+    }
+
+    &__share {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+
+        &__files {
+            background: $second-bg;
+            color: $second-color;
+            padding: 10px 20px;
+            margin-right: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+            
+            p {
+                font-size: 16px;
+                text-align: right;
+            }
+
+            &__icon {
+                display: flex;
+                align-items: center;
+
+                i {
+                    font-size: 40px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    text-align: right;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+                
+                i {
+                    animation: ring 0.25s forwards alternate infinite linear;
+                }
+            }
+
+            @keyframes ring {
+                from {
+                    transform: rotate(-10deg);
+                }
+                to {
+                    transform: rotate(10deg);
+                }
+            }
+        }
+
+        &__links {
+            background: $main-bg;
+            color: $txt-color;
+            padding: 10px 40px 10px 20px;
+            margin-left: 5px;
+            border-radius: 8px;
+            cursor: pointer;
+
+            p {
+                font-size: 16px;
+                text-align: right;
+            }
+
+            &__icon {
+                display: flex;
+                align-items: center;
+                i {
+                    font-size: 40px;
+                    margin-right: 10px;
+                    text-align: left;
+                }
+
+                span {
+                    text-align: right;
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+
+                i {
+                    animation: ring 0.25s forwards alternate infinite linear;
+                }
+            }
+
+            @keyframes ring {
+                from {
+                    transform: rotate(-10deg);
+                }
+                to {
+                    transform: rotate(10deg);
+                }
+            }
+        }
+    }
+
+    &__allFiles {
+
+        &__heading {
+            @include flex(center, space-between);
+            margin-bottom: 20px;
+
+            p {
+                font-size: 15px;
+                font-weight: 600;
+                color: $txt-color;
+            }
+
+            i {
+                font-size: 18px;
+                color: $txt-color;
+                cursor: pointer;
+            }
+        }
+
+        &__content {
+
+            &__item {
+                @include flex(center, space-between);
+                margin-bottom: 5px;
+                padding: 5px 5px;
+                background: transparent;
+                border-radius: 8px;
+                cursor: pointer;
+                
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                }
+
+                &__txt {
+                    span {
+                        color: $txt-color;
+                    }
+                }
+
+                i {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    background: $bg-chat;
+                }
+            }
+        }
+    }
+}
+.isNone{
+    display: none;
+}
